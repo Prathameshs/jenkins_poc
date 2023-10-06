@@ -1,324 +1,233 @@
-#######################
-# device feature info #
-#######################
-
-##########################
-# G Pro                  #
-##########################
 g_pro_sim:
   pid: c339
   features:
-    arrival_removal: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f8060_reportRate: "C"
-    f4540_keyboardInternationalLayout: "C"
-    f40a2_fnInversion: "P"
-    f1bc0_hidReport: "N" # Bug DSIM-722 pending
-    f8070_colorLedEffects: "N"
-
-##########################
-# G903                   #
-##########################
+    arrival_removal: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f8060_reportRate: C
+    f4540_keyboardInternationalLayout: C
+    f40a2_fnInversion: P
+    f1bc0_hidReport: N
+    f8070_colorLedEffects: N
 g_903_sim:
   pid: c091
   features:
-    arrival_removal: "N"
-    f0000_root: "N"
-    f0001_featureSet: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f1d4b_wirelessDeviceStatus: "N"
-    f0020_configChange: "N"
-    f1001_batteryVoltage: "C"
-    f8071_rgbEffects: "P"
-    f8110_mouseButtonSpy: "P"
-    f8060_reportRate: "C"
-    f2201_adjustableDpi: "P"
-    f00c2_secureDfu: "C"
-    f8100_onboardProfiles: "P"
-    f2121_hiResWheel: "N"
-    f00d0_dfu: "P"
-
-
-##########################
-# G903 Wireless          #
-##########################
+    arrival_removal: N
+    f0000_root: N
+    f0001_featureSet: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f1d4b_wirelessDeviceStatus: N
+    f0020_configChange: N
+    f1001_batteryVoltage: C
+    f8071_rgbEffects: P
+    f8110_mouseButtonSpy: P
+    f8060_reportRate: C
+    f2201_adjustableDpi: P
+    f00c2_secureDfu: C
+    f8100_onboardProfiles: P
+    f2121_hiResWheel: N
+    f00d0_dfu: P
 g_903_wireless_sim:
   pid: 4087
   features:
-    arrival_removal: "N"
-    f0000_root: "N"
-    f0001_featureSet: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f1d4b_wirelessDeviceStatus: "N"
-    f0020_configChange: "N"
-    f1001_batteryVoltage:   "C"
-    f8071_rgbEffects: "P"
-    f8110_mouseButtonSpy: "P"
-    f8060_reportRate: "C"
-    f2201_adjustableDpi: "P"
-    f00c2_secureDfu: "C"
-    f8100_onboardProfiles: "P"
-    f00d0_dfu: "P"
-
-##########################
-# G502 LS                #
-##########################
+    arrival_removal: N
+    f0000_root: N
+    f0001_featureSet: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f1d4b_wirelessDeviceStatus: N
+    f0020_configChange: N
+    f1001_batteryVoltage: C
+    f8071_rgbEffects: P
+    f8110_mouseButtonSpy: P
+    f8060_reportRate: C
+    f2201_adjustableDpi: P
+    f00c2_secureDfu: C
+    f8100_onboardProfiles: P
+    f00d0_dfu: P
 g_502_ls_sim:
   pid: c08d
   features:
-    arrival_removal: "N"
-    f0000_root: "N"
-    f0001_featureSet: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f1d4b_wirelessDeviceStatus: "N"
-    f0020_configChange: "N"
-    f1001_batteryVoltage:   "C"
-    f8110_mouseButtonSpy: "P"
-    f8060_reportRate: "C"
-    f2201_adjustableDpi: "P"
-    f00c2_secureDfu: "N"
-    f8100_onboardProfiles: "P"
-    f8070_colorLedEffects: "P"
-
-
-##########################
-# G502 LS Wireless       #
-##########################
+    arrival_removal: N
+    f0000_root: N
+    f0001_featureSet: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f1d4b_wirelessDeviceStatus: N
+    f0020_configChange: N
+    f1001_batteryVoltage: C
+    f8110_mouseButtonSpy: P
+    f8060_reportRate: C
+    f2201_adjustableDpi: P
+    f00c2_secureDfu: N
+    f8100_onboardProfiles: P
+    f8070_colorLedEffects: P
 g_502_ls_wireless_sim:
   pid: 407f
   features:
-    arrival_removal: "N"
-    f0000_root: "N"
-    f0001_featureSet: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f1d4b_wirelessDeviceStatus: "N"
-    f0020_configChange: "N"
-    f1001_batteryVoltage:   "C"
-    f8110_mouseButtonSpy: "P"
-    f8060_reportRate: "C"
-    f2201_adjustableDpi: "P"
-    f8100_onboardProfiles: "P"
-    f8070_colorLedEffects: "P"
-
-
-##########################
-# Pro X                  #
-##########################
+    arrival_removal: N
+    f0000_root: N
+    f0001_featureSet: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f1d4b_wirelessDeviceStatus: N
+    f0020_configChange: N
+    f1001_batteryVoltage: C
+    f8110_mouseButtonSpy: P
+    f8060_reportRate: C
+    f2201_adjustableDpi: P
+    f8100_onboardProfiles: P
+    f8070_colorLedEffects: P
 pro_x_sim:
   pid: c094
   features:
-    arrival_removal: "N"
-    f0003_firmwareInfo: "N"
-    f0005_deviceNameType: "C"
-    f2201_adjustableDpi: "P"
-    f8060_reportRate: "C"
-    f8110_mouseButtonSpy: "P"
-    f1004_unifiedBattery: "C"
-
-
-##########################
-# Pro X Super LS 2       #
-##########################
+    arrival_removal: N
+    f0003_firmwareInfo: N
+    f0005_deviceNameType: C
+    f2201_adjustableDpi: P
+    f8060_reportRate: C
+    f8110_mouseButtonSpy: P
+    f1004_unifiedBattery: C
 pro_x_super_ls_2_sim:
   pid: c09b
   features:
-    arrival_removal: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f1004_unifiedBattery: "C"
-    f8110_mouseButtonSpy: "P"
-    f8100_onboardProfiles: "N"
-
-#################################
-# Pro X Super LS 2 Wireless     #
-#################################
+    arrival_removal: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f1004_unifiedBattery: C
+    f8110_mouseButtonSpy: P
+    f8100_onboardProfiles: N
 pro_x_super_ls_2_wireless_sim:
   pid: 40a9
   features:
-    arrival_removal: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f1004_unifiedBattery: "C"
-    f8110_mouseButtonSpy: "P"
-    f8100_onboardProfiles: "N"
-
-
-##########################
-# G 203                  #
-##########################
+    arrival_removal: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f1004_unifiedBattery: C
+    f8110_mouseButtonSpy: P
+    f8100_onboardProfiles: N
 g_203_sim:
   pid: c092
   features:
-    arrival_removal: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f2201_adjustableDpi: "P"
-    f8060_reportRate: "C"
-    f8071_rgbEffects: "P"
-    f8110_mouseButtonSpy: "P"
-    f00c2_secureDfu: "C"
-    f00d0_dfu: "P"
-
-
-##########################
-# G 815                  #
-##########################
+    arrival_removal: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f2201_adjustableDpi: P
+    f8060_reportRate: C
+    f8071_rgbEffects: P
+    f8110_mouseButtonSpy: P
+    f00c2_secureDfu: C
+    f00d0_dfu: P
 g_815_sim:
   pid: c33f
   features:
-    arrival_removal: "N"
-    f0003_firmwareInfo: "N"
-    f0005_deviceNameType: "C"
-    f8060_reportRate: "C"
-    f4540_keyboardInternationalLayout: "C"
-    f1bc0_hidReport: "C"
-    f4522_disableKeybyUsage: "N"
-
-
-##########################
-# G 915                  #
-##########################
+    arrival_removal: N
+    f0003_firmwareInfo: N
+    f0005_deviceNameType: C
+    f8060_reportRate: C
+    f4540_keyboardInternationalLayout: C
+    f1bc0_hidReport: C
+    f4522_disableKeybyUsage: N
 g_915_sim:
   pid: c33e
   features:
-    arrival_removal: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f1001_batteryVoltage:   "C"
-    f8071_rgbEffects: "P"
-    f1b04_specialKeysMseButtons: "N"
-    f8060_reportRate: "C"
-    f4540_keyboardInternationalLayout: "C"
-    f1bc0_hidReport: "C"
-    f4522_disableKeybyUsage: "N"
-    f00c2_secureDfu: "C"
-
-
-##########################
-# G 512                  #
-##########################
+    arrival_removal: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f1001_batteryVoltage: C
+    f8071_rgbEffects: P
+    f1b04_specialKeysMseButtons: N
+    f8060_reportRate: C
+    f4540_keyboardInternationalLayout: C
+    f1bc0_hidReport: C
+    f4522_disableKeybyUsage: N
+    f00c2_secureDfu: C
 g_512_sim:
   pid: c33c
   features:
-    arrival_removal: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f8070_colorLEDEffects: "N"
-    f1b04_specialKeysMseButtons: "N"
-    f8060_reportRate: "C"
-    f4540_keyboardInternationalLayout: "C"
-    f1bc0_hidReport: "N" # Bug DSIM-722 pending
-    f4522_disableKeybyUsage: "N"
-    f00c2_secureDfu: "C"
-    f00d0_dfu: "P"
-
-
-##########################
-# G 915 TKL              #
-##########################
+    arrival_removal: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f8070_colorLEDEffects: N
+    f1b04_specialKeysMseButtons: N
+    f8060_reportRate: C
+    f4540_keyboardInternationalLayout: C
+    f1bc0_hidReport: N
+    f4522_disableKeybyUsage: N
+    f00c2_secureDfu: C
+    f00d0_dfu: P
 g_915_tkl_sim:
   pid: c343
   features:
-    arrival_removal: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f0007_deviceFriendlyName: "P"
-    f1001_batteryVoltage: "C"
-    f1b04_specialKeysMseButtons: "P"
-    f1bc0_hidReport: "C"
-    f4540_keyboardInternationalLayout: "C"
-    f8060_reportRate: "C"
-    f8071_rgbEffects: "P"
-    f8100_onboardProfiles: "P"
-
-
-##########################
-# G 610 -- keyboard      #
-##########################
+    arrival_removal: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f0007_deviceFriendlyName: P
+    f1001_batteryVoltage: C
+    f1b04_specialKeysMseButtons: P
+    f1bc0_hidReport: C
+    f4540_keyboardInternationalLayout: C
+    f8060_reportRate: C
+    f8071_rgbEffects: P
+    f8100_onboardProfiles: P
 g_610_sim:
   pid: c333
   features:
-    arrival_removal: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f1bc0_hidReport: "N" # Bug DSIM-722 pending
-    f4522: "N"
-    f4540_keyboardInternationalLayout: "C"
-    f8060_reportRate: "C"
-    f8070: "N"
-
-
-##########################
-# G 733 -- headset       #
-##########################
+    arrival_removal: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f1bc0_hidReport: N
+    f4522: N
+    f4540_keyboardInternationalLayout: C
+    f8060_reportRate: C
+    f8070: N
 g_733_sim:
   pid: ab5
   features:
-    arrival_removal: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f8070_colorLEDEffects: "N"
-
-
-##########################
-## mx_keys               #
-##########################
+    arrival_removal: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f8070_colorLEDEffects: N
 mx_keys_sim:
   pid: 408a
   features:
-    arrival_removal: "N"
-    f0000_root: "N"
-    f0001_featureSet: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f0007_deviceFriendlyName: "P"
-    f1d4b_wirelessDeviceStatus: "N"
-    f1000_batteryLevelStatus: "P"
-    f4220_lockKeyState: "P"
-    f1b04_specialKeysMseButtons: "N"
-
-
-##########################
-# mx_master_3            #
-##########################
+    arrival_removal: N
+    f0000_root: N
+    f0001_featureSet: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f0007_deviceFriendlyName: P
+    f1d4b_wirelessDeviceStatus: N
+    f1000_batteryLevelStatus: P
+    f4220_lockKeyState: P
+    f1b04_specialKeysMseButtons: N
 mx_master_3_sim:
   pid: 4082
   features:
-    arrival_removal: "N"
-    f0000_root: "N"
-    f0001_featureSet: "N"
-    f0003_firmwareInfo: "C"
-    f0005_deviceNameType: "C"
-    f0007_deviceFriendlyName: "P"
-    f1d4b_wirelessDeviceStatus: "N"
-    f1000_batteryLevelStatus: "P"
-    f2150_thumbWheel: "N"
-    f2121_hiResWheel: "P"
-    f2110_smartShift: "N"
-    f2201_adjustableDpi: "P"
-    f1b04_specialKeysMseButtons: "P"
-    f00d0_dfu: "P"
-
-
-############################
-### mx_anywhere_3b         #
-############################
+    arrival_removal: N
+    f0000_root: N
+    f0001_featureSet: N
+    f0003_firmwareInfo: C
+    f0005_deviceNameType: C
+    f0007_deviceFriendlyName: P
+    f1d4b_wirelessDeviceStatus: N
+    f1000_batteryLevelStatus: P
+    f2150_thumbWheel: N
+    f2121_hiResWheel: P
+    f2110_smartShift: N
+    f2201_adjustableDpi: P
+    f1b04_specialKeysMseButtons: P
+    f00d0_dfu: P
 mx_anywhere_3b_sim:
   pid: b02d
   features:
-    arrival_removal: "N"
-    f0000_root: "N"
-    f0001_featureSet: "N"
-    f0003_firmwareInfo: "N" # TODO: DSIM-894
-    f0005_deviceNameType: "C"
-    f0007_deviceFriendlyName: "P"
-    f1d4b_wirelessDeviceStatus: "N"
-    f1004_unifiedBattery: "N"
-    f1b04_specialKeysMseButtons: "P"
-
-
+    arrival_removal: N
+    f0000_root: N
+    f0001_featureSet: N
+    f0003_firmwareInfo: N
+    f0005_deviceNameType: C
+    f0007_deviceFriendlyName: P
+    f1d4b_wirelessDeviceStatus: N
+    f1004_unifiedBattery: N
+    f1b04_specialKeysMseButtons: P
