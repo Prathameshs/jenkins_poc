@@ -1,0 +1,60 @@
+{
+    "g_502_ls_wireless_sim": {
+        "name": "G502 X PLUS",
+        "pid": "407f",
+        "type": "mouse",
+        "connection_type": "wireless",
+        "features": {
+            "arrival_removal": "N",
+            "f0000_root": "N",
+            "f0001_featureSet": "N",
+            "f0003_firmwareInfo": "Y",
+            "f0005_deviceNameType": "Y",
+            "f1d4b_wirelessDeviceStatus": "N",
+            "f0020_configChange": "N",
+            "f1001_batteryVoltage": "Y",
+            "f8110_mouseButtonSpy": "Y",
+            "f8060_reportRate": "Y",
+            "f2201_adjustableDpi": "Y",
+            "f8100_onboardProfiles": "Y",
+            "f8070_colorLedEffects": "Y"
+        }
+    },
+    "g_502_ls_sim": {
+        "name": "G502 X",
+        "pid": "c08d",
+        "type": "mouse",
+        "connection_type": "wired",
+        "features": {
+            "arrival_removal": "N",
+            "f0000_root": "N",
+            "f0001_featureSet": "N",
+            "f0003_firmwareInfo": "C",
+            "f0005_deviceNameType": "C",
+            "f1d4b_wirelessDeviceStatus": "N",
+            "f0020_configChange": "N",
+            "f1001_batteryVoltage": "C",
+            "f8110_mouseButtonSpy": "Y",
+            "f8060_reportRate": "C",
+            "f2201_adjustableDpi": "Y",
+            "f8100_onboardProfiles": "Y",
+            "f8070_colorLedEffects": "Y"
+        }
+    },
+    "pro_x_super_ls_2_sim": {
+        "name": "PRO X SUPERLIGHT 2",
+        "pid": "c09b",
+        "type": "mouse",
+        "connection_type": "wireless",
+        "features": {
+            "arrival_removal": "N",
+            "f0000_root": "N",
+            "f0001_featureSet": "Y",
+            "f0003_firmwareInfo": "Y",
+            "f0005_deviceNameType": "Y",
+            "f1004_unifiedBattery": "N",
+            "f8110_mouseButtonSpy": "N",
+            "f8100_onboardProfiles": "N"
+        }
+    }
+}
