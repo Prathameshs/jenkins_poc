@@ -1,0 +1,151 @@
+properties(
+    [
+        gitLabConnection(gitLabConnection: '', jobCredentialId: ''), 
+        parameters(
+            [
+                activeChoice(
+                    choiceType: 'PT_SINGLE_SELECT', 
+                    description: 'Type of Deployment ', 
+                    filterLength: 1, 
+                    filterable: false, 
+                    name: 'DEPLOYMENT_TYPE', 
+                    randomName: 'choice-parameter-117521917871400', 
+                    script: 
+                        groovyScript(
+                            fallbackScript: [
+                                classpath: [], 
+                                oldScript: '', 
+                                sandbox: true, 
+                                script: ''
+                            ], 
+                            script: [
+                                classpath: [], 
+                                oldScript: '', 
+                                sandbox: true, 
+                                script: '''
+                                    return ["Refresh Jenkins", "Execute"]
+                                '''
+                            ]
+                        )
+                ), 
+                activeChoice(
+                    choiceType: 'PT_CHECKBOX', 
+                    description: 'Device to run automation for', 
+                    filterLength: 1, 
+                    filterable: false, 
+                    name: 'DEVICE_NAME', 
+                    randomName: 'choice-parameter-117521923218900', 
+                    script: 
+                        groovyScript(
+                            fallbackScript: [
+                                classpath: [], 
+                                oldScript: '', 
+                                sandbox: true, 
+                                script: 'return ["DUMMY DEVICE 1", "DUMMY DEVICE 2"]'
+                            ], 
+                            script: [
+                                classpath: [], 
+                                oldScript: '', 
+                                sandbox: false, 
+                                script: '''
+                                    import org.yaml.snakeyaml.Yaml
+                                    def rootNodes = []
+                                    def yamlFile = new File("D:/jenkins_job_data/device_data.yml")
+                                    def yamlText = yamlFile.text
+                                    def yaml = new Yaml()
+                                    def yamlData = yaml.load(yamlText)
+                                    yamlData.each { key, value ->
+                                        if (value instanceof Map) {
+                                            rootNodes << key
+                                        }
+                                    }
+                                    return rootNodes
+                                    '''
+                            ]
+                        )
+                ),
+                reactiveChoice(
+                    choiceType: 'PT_MULTI_SELECT',
+                    filterLength: 1, 
+                    filterable: false, 
+                    name: 'FEATURES', 
+                    randomName: 'choice-parameter-118806995752300', 
+                    referencedParameters: 'DEVICE_NAME', 
+                    script: 
+                        groovyScript(
+                            fallbackScript: [
+                                classpath: [], 
+                                oldScript: '', 
+                                sandbox: true, 
+                                script: 'return ["No features supported for this device"]'], 
+                            script: [
+                                classpath: [], 
+                                oldScript: '', 
+                                sandbox: true, 
+                                script: '''
+                                    if(DEVICE_NAME.equals("g_502_ls_sim")){
+                                        return ["arrival_removal",
+                                    		"f0000_root",
+                                    		"f0001_featureSet",
+                                    		"f0003_firmwareInfo",
+                                    		"f0005_deviceNameType",
+                                    		"f1d4b_wirelessDeviceStatus",
+                                    		"f0020_configChange",
+                                    		"f1001_batteryVoltage",
+                                    		"f8110_mouseButtonSpy",
+                                    		"f8060_reportRate",
+                                    		"f2201_adjustableDpi",
+                                    		"f00c2_secureDfu",
+                                    		"f8100_onboardProfiles",
+                                    		"f8070_colorLedEffects"]
+                                    } else if(DEVICE_NAME.equals("g_915_tkl_sim")){
+                                        return ["arrival_removal",
+                                    		"f0003_firmwareInfo",
+                                    		"f0005_deviceNameType",
+                                    		"f1001_batteryVoltage",
+                                    		"f8071_rgbEffects",
+                                    		"f1b04_specialKeysMseButtons",
+                                    		"f8060_reportRate",
+                                    		"f4540_keyboardInternationalLayout",
+                                    		"f1bc0_hidReport",
+                                    		"f4522_disableKeybyUsage",
+                                    		"f00c2_secureDfu"]
+                                    }
+                                '''
+                            ]
+                        )
+                )
+            ]
+        )
+    ]
+)
+
+String currentJobParentFolderName = currentBuild.fullProjectName.split('/')[0]
+
+pipeline {
+    agent any
+     environment {
+        BuildName =  "${currentJobParentFolderName}.${BUILD_NUMBER}"
+    }
+
+    stages {
+        stage('Setup') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true], [$class: 'CheckoutOption', timeout: 120], [$class: 'SubmoduleOption', disableSubmodules: true, parentCredentials: true, recursiveSubmodules: false, reference: '', trackingSubmodules: false]], userRemoteConfigs: [[credentialsId: 'PrathameshGithub', url: 'https://github.com/Prathameshs/jenkins_poc.git']]])
+                echo "Refreshing Jenkins "
+            }
+        }
+        stage('Execute') {
+            when {
+                expression { params.DEPLOYMENT_TYPE == 'Execute'}
+            }
+            steps {
+                echo "=> Executing Automation here........"
+                echo "=> Devices selected : ${params.DEVICE_NAME}"
+                echo "=> Features selected: ${params.FEATURES}"
+            }
+        }
+
+    }
+
+}
